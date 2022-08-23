@@ -1,0 +1,37 @@
+[
+  {
+    "ProductId": "010011",
+    "BidSize": 25,
+    "BidPrice": 46,
+    "OfferPrice": 48,
+    "OfferSize": 12
+  },
+  {
+    "ProductId": "010012",
+    "BidSize": 62,
+    "BidPrice": 36,
+    "OfferPrice": 37.56,
+    "OfferSize": 81
+  },
+  {
+    "ProductId": "010013",
+    "BidSize": 85,
+    "BidPrice": 17,
+    "OfferPrice": 18.32,
+    "OfferSize": 77
+  },
+  {
+    "ProductId": "010014",
+    "BidSize": 75,
+    "BidPrice": 36,
+    "OfferPrice": 33.5,
+    "OfferSize": 63
+  },
+  {
+    "ProductId": "010015",
+    "BidSize": 95,
+    "BidPrice": 28,
+    "OfferPrice": 49.2,
+    "OfferSize": 68
+  }
+]
