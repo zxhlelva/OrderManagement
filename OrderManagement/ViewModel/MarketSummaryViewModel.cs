@@ -38,25 +38,12 @@ namespace OrderManagement.ViewModel
             }
         }
 
-        public async Task Init()
-        {
-            try
-            {
-                await _priceService.InitMarket();
-            }
-            catch (Exception ex)
-            {
-                _messageService.ShowMessage("Error", ex.Message);
-            }
-        }
-
         public async Task LoadList()
         {
             try
             {
                 var list = await _priceService.GetList();
-
-                Items = new OMSObservableCollection<MartketPriceItemViewModel>(list.Select(i => new MartketPriceItemViewModel(i)), (i) => i.ProductId);
+                Items = new OMSObservableCollection<MartketPriceItemViewModel>(list.Select(item => new MartketPriceItemViewModel(item)), (item) => item.ProductId);
 
             }
             catch (Exception ex)
@@ -69,7 +56,7 @@ namespace OrderManagement.ViewModel
         {
             foreach (var item in e.Items)
             {
-                ExecuteOnUIThread(() =>_items[item.ProductId].Update(item));
+                ExecuteOnUIThread(() => _items[item.ProductId].Update(item));
             }
         }
 

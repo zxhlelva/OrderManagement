@@ -9,8 +9,6 @@ namespace OrderManagement.Service
     {
         event EventHandler<MartketPriceUpdatedEventArgs> MartketPriceUpdated;
 
-        Task InitMarket();
-
         Task<IEnumerable<ProductMarket>> GetList();
     }
 }

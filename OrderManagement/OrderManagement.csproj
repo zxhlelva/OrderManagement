@@ -85,6 +85,10 @@
     <Compile Include="View\PlaceOrderView.xaml.cs">
       <DependentUpon>PlaceOrderView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Resource\Language\EN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

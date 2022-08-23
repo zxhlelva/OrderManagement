@@ -16,11 +16,6 @@ namespace OrderManagement.Service
             MartketPriceUpdated?.Invoke(this, new MartketPriceUpdatedEventArgs { Items = items });
         }
 
-        public virtual Task InitMarket()
-        {
-            throw new NotImplementedException();
-        }
-
         public virtual Task<IEnumerable<ProductMarket>> GetList()
         {
             throw new NotImplementedException();
