@@ -35,18 +35,32 @@ namespace OrderManagement.View
         {
             int selectedLanguageIndex = CbxLanguage.SelectedIndex;
 
+            string requestedCulture = string.Empty;
+
             ResourceDictionary dict = new ResourceDictionary();
 
             if (selectedLanguageIndex == 0)
             {
-                dict.Source = new Uri(@"Resource\Language\ZH.xaml", UriKind.Relative);
+                //dict.Source = new Uri(@"Resource\Language\ZH.xaml", UriKind.Relative);
+                requestedCulture = @"Resource\Language\ZH.xaml";
             }
             else
             {
-                dict.Source = new Uri(@"Resource\Language\EN.xaml", UriKind.Relative);
+                //dict.Source = new Uri(@"Resource\Language\EN.xaml", UriKind.Relative);
+                requestedCulture = @"Resource\Language\EN.xaml";
             }
 
-            Application.Current.Resources.MergedDictionaries[0] = dict;
+            //Application.Current.Resources.MergedDictionaries[0] = dict;
+
+            List<ResourceDictionary> dictionaryList = new List<ResourceDictionary>();
+            foreach (ResourceDictionary dictionary in Application.Current.Resources.MergedDictionaries)
+            {
+                dictionaryList.Add(dictionary);
+            }
+            
+            ResourceDictionary resourceDictionary = dictionaryList.FirstOrDefault(d => d.Source.OriginalString.Equals(requestedCulture));
+            Application.Current.Resources.MergedDictionaries.Remove(resourceDictionary);
+            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary);
         }
     }
 }
