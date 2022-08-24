@@ -13,15 +13,19 @@
         </Grid.RowDefinitions>
         <StackPanel>
             <TextBlock Text="Market Summary Window"/>
+            <ComboBox Name="CbxLanguage" SelectionChanged="CbxLanguage_SelectionChanged">
+                <ComboBoxItem Content="中文（简体）" />
+                <ComboBoxItem Content="英语（美国）" />
+            </ComboBox>
         </StackPanel>
 
         <DataGrid Grid.Row="1" ItemsSource="{Binding Items}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding ProductId}" Header="Product Id" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{Binding BidSize}" Header="Bid Size" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{Binding BidPrice}" Header="Bid Price" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{Binding OfferSize}" Header="Offer Size" IsReadOnly="True"/>
-                <DataGridTextColumn Binding="{Binding OfferPrice}" Header="Offer Price" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding ProductId}" Header="{DynamicResource ProductId}" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding BidSize}" Header="{DynamicResource BidSize}" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding BidPrice}" Header="{DynamicResource BidPrice}" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding OfferSize}" Header="{DynamicResource OfferSize}" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding OfferPrice}" Header="{DynamicResource OfferPrice}" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

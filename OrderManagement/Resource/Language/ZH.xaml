@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:local="clr-namespace:OrderManagement.Resource.Language">
+    <system:String x:Key="SummaryWindow">市场行情窗口</system:String>
+    <system:String x:Key="ProductId">产品标识</system:String>
+    <system:String x:Key="BidSize">买入量</system:String>
+    <system:String x:Key="BidPrice">买入价</system:String>
+    <system:String x:Key="OfferPrice">卖出价</system:String>
+    <system:String x:Key="OfferSize">卖出量</system:String>    
+</ResourceDictionary>

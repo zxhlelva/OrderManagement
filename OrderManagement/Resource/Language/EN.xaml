@@ -1,6 +1,11 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=mscorlib"
-                    >
-    
+                    xmlns:local="clr-namespace:OrderManagement.Resources.Language">
+    <system:String x:Key="SummaryWindow">Market Summary Window</system:String>
+    <system:String x:Key="ProductId">Product Id</system:String>
+    <system:String x:Key="BidSize">Bid Size</system:String>
+    <system:String x:Key="BidPrice">Bid Price</system:String>
+    <system:String x:Key="OfferPrice">Offer Price</system:String>
+    <system:String x:Key="OfferSize">Offer Size</system:String>
 </ResourceDictionary>

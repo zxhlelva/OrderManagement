@@ -30,5 +30,23 @@ namespace OrderManagement.View
             DataContext = _vm;
             _vm.LoadList();
         }
+
+        private void CbxLanguage_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int selectedLanguageIndex = CbxLanguage.SelectedIndex;
+
+            ResourceDictionary dict = new ResourceDictionary();
+
+            if (selectedLanguageIndex == 0)
+            {
+                dict.Source = new Uri(@"Resource\Language\ZH.xaml", UriKind.Relative);
+            }
+            else
+            {
+                dict.Source = new Uri(@"Resource\Language\EN.xaml", UriKind.Relative);
+            }
+
+            Application.Current.Resources.MergedDictionaries[0] = dict;
+        }
     }
 }
