@@ -8,4 +8,12 @@
     <system:String x:Key="BidPrice">Bid Price</system:String>
     <system:String x:Key="OfferPrice">Offer Price</system:String>
     <system:String x:Key="OfferSize">Offer Size</system:String>
+
+    <system:String x:Key="PlaceOrderWindow">Place Order Window</system:String>
+    <system:String x:Key="PlaceOrderProductId">Product Id:</system:String>
+    <system:String x:Key="Quantity">Quantity:</system:String>
+    <system:String x:Key="Price">Price:</system:String>
+    <system:String x:Key="Buy">Buy:</system:String>
+    <system:String x:Key="Sell">Sell:</system:String>
+    <system:String x:Key="Portfolio">Portfolio:</system:String>
 </ResourceDictionary>

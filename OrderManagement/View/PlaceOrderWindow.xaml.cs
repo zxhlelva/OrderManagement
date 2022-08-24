@@ -1,5 +1,4 @@
-﻿using OrderManagement.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,22 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace OrderManagement.View
 {
     /// <summary>
-    /// PlaceOrderView.xaml 的交互逻辑
+    /// Interaction logic for PlaceOrderWindow.xaml
     /// </summary>
-    public partial class PlaceOrderView : UserControl
+    public partial class PlaceOrderWindow : Window
     {
-        PlaceOrderViewModel _vm;
-        public PlaceOrderView(PlaceOrderViewModel vm)
+        public PlaceOrderWindow()
         {
             InitializeComponent();
-            _vm = vm;
-            DataContext = _vm;
         }
     }
 }

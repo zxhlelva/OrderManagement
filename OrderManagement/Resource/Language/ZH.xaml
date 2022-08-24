@@ -7,5 +7,13 @@
     <system:String x:Key="BidSize">买入量</system:String>
     <system:String x:Key="BidPrice">买入价</system:String>
     <system:String x:Key="OfferPrice">卖出价</system:String>
-    <system:String x:Key="OfferSize">卖出量</system:String>    
+    <system:String x:Key="OfferSize">卖出量</system:String>
+
+    <system:String x:Key="PlaceOrderWindow">下单窗口</system:String>
+    <system:String x:Key="PlaceOrderProductId">产品标识:</system:String>
+    <system:String x:Key="Quantity">数量：</system:String>
+    <system:String x:Key="Price">价格：</system:String>
+    <system:String x:Key="Buy">买：</system:String>
+    <system:String x:Key="Sell">卖：</system:String>
+    <system:String x:Key="Portfolio">投资组合：</system:String>
 </ResourceDictionary>
