@@ -12,7 +12,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <ComboBox Name="CbxLanguage" Width="100" HorizontalAlignment="Right" SelectionChanged="CbxLanguage_SelectionChanged" Background="Black">
+            <ComboBox Name="CbxLanguage" Width="100" HorizontalAlignment="Right" DropDownClosed="CbxLanguage_DropDownClosed">
                 <ComboBoxItem Content="中文（简体）" IsSelected="True" />
                 <ComboBoxItem Content="英语（美国）" />
             </ComboBox>
@@ -22,7 +22,13 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Width="120" Binding="{Binding ProductId}" Header="{DynamicResource ProductId}" IsReadOnly="True"/>
                 <DataGridTextColumn Width="120" Binding="{Binding BidSize}" Header="{DynamicResource BidSize}" IsReadOnly="True"/>
-                <DataGridTextColumn Width="120" Binding="{Binding BidPrice}" Header="{DynamicResource BidPrice}" IsReadOnly="True"/>
+                <DataGridTemplateColumn Width="120" Header="{DynamicResource BidPrice}" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding BidPrice}" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTextColumn Width="120" Binding="{Binding OfferSize}" Header="{DynamicResource OfferSize}" IsReadOnly="True"/>
                 <DataGridTextColumn Width="120" Binding="{Binding OfferPrice}" Header="{DynamicResource OfferPrice}" IsReadOnly="True"/>
             </DataGrid.Columns>

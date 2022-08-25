@@ -1,4 +1,5 @@
-﻿using OrderManagement.ViewModel;
+﻿using OrderManagement.Interface;
+using OrderManagement.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace OrderManagement.View
     /// <summary>
     /// PlaceOrderView.xaml 的交互逻辑
     /// </summary>
-    public partial class PlaceOrderView : UserControl
+    public partial class PlaceOrderView : UserControl, IPlaceOrderView
     {
         PlaceOrderViewModel _vm;
         public PlaceOrderView(PlaceOrderViewModel vm)

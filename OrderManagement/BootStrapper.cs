@@ -39,10 +39,13 @@ namespace OrderManagement
 
             builder.RegisterType<MainWindow>();
             builder.RegisterType<MarketSummaryView>().As<IMarketSummaryView>();
-            builder.RegisterType<PlaceOrderView>();
+
+            builder.RegisterType<PlaceOrderWindow>();
+            builder.RegisterType<PlaceOrderView>().As<IPlaceOrderView>();
  
             builder.RegisterType<MainWindowViewModel>();
             builder.RegisterType<MarketSummaryViewModel>();
+            builder.RegisterType<PlaceOrderWindowViewModel>();
             builder.RegisterType<PlaceOrderViewModel>();
 
             builder.RegisterType<ProductDataService>().As<IProductDataService>();

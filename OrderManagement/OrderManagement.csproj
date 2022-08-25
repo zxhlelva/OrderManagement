@@ -67,6 +67,7 @@
     <Compile Include="Interface\ILog.cs" />
     <Compile Include="Interface\IMarketSummaryView.cs" />
     <Compile Include="Interface\IMessageService.cs" />
+    <Compile Include="Interface\IPlaceOrderView.cs" />
     <Compile Include="Model\MarketSummaryItem.cs" />
     <Compile Include="Interface\IPriceService.cs" />
     <Compile Include="ViewModel\OMSObservableCollection.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="ViewModel\MartketPriceItemViewModel.cs" />
     <Compile Include="ViewModel\PlaceOrderItemViewModel.cs" />
     <Compile Include="ViewModel\PlaceOrderViewModel.cs" />
+    <Compile Include="ViewModel\PlaceOrderWindowViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\MarketSummaryView.xaml.cs">
       <DependentUpon>MarketSummaryView.xaml</DependentUpon>

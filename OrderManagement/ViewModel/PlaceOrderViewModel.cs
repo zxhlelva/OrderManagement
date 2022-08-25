@@ -9,7 +9,7 @@ namespace OrderManagement.ViewModel
 {
     public class PlaceOrderViewModel
     {
-        public ObservableCollection<PlaceOrderItemViewModel> Items { get; set; }    
+        public ObservableCollection<PlaceOrderItemViewModel> Items { get; set; }
 
         public PlaceOrderViewModel(MartketPriceItemViewModel model)
         {
@@ -19,7 +19,22 @@ namespace OrderManagement.ViewModel
                 ProductId = model.ProductId,
                 Price = model.OfferPrice,
                 Quantity = model.OfferSize,
-                Portfolio = new List<string>()
+                Portfolio = new ObservableCollection<string>()
+                {
+                    "Default"
+                }
+            };
+        }
+
+        public PlaceOrderViewModel()
+        {
+            Items = new ObservableCollection<PlaceOrderItemViewModel>();
+            PlaceOrderItemViewModel item = new PlaceOrderItemViewModel()
+            {
+                ProductId = "11111",
+                Price = 15,
+                Quantity = 15,
+                Portfolio = new ObservableCollection<string>()
                 {
                     "Default"
                 }

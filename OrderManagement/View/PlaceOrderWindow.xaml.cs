@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderManagement.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,12 @@ namespace OrderManagement.View
     /// </summary>
     public partial class PlaceOrderWindow : Window
     {
-        public PlaceOrderWindow()
+        PlaceOrderWindowViewModel _vm;
+        public PlaceOrderWindow(PlaceOrderWindowViewModel vm)
         {
             InitializeComponent();
+            _vm = vm;
+            DataContext = _vm;
         }
     }
 }

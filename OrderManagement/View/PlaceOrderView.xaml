@@ -14,10 +14,10 @@
         </Grid.RowDefinitions>
         <DataGrid Grid.Row="1" ItemsSource="{Binding Items}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="150" Binding="{Binding ProductId}" Header="{DynamicResource ProductId}" IsReadOnly="True"/>
-                <DataGridTextColumn Width="150" Binding="{Binding Quantity}" Header="{DynamicResource BidSize}" IsReadOnly="True"/>
-                <DataGridTextColumn Width="150" Binding="{Binding Price}" Header="{DynamicResource BidPrice}" IsReadOnly="True"/>
-                <DataGridComboBoxColumn Width="150" Header="{DynamicResource Portfolio}" IsReadOnly="True" SelectedItemBinding="{Binding Portfolio[0]}" ItemsSource="{Binding Portfolio}"/>
+                <DataGridTextColumn Width="140" Binding="{Binding ProductId}" Header="{DynamicResource ProductId}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="140" Binding="{Binding Quantity}" Header="{DynamicResource BidSize}" IsReadOnly="True"/>
+                <DataGridTextColumn Width="140" Binding="{Binding Price}" Header="{DynamicResource BidPrice}" IsReadOnly="True"/>
+                <DataGridComboBoxColumn Width="180" Header="{DynamicResource Portfolio}" IsReadOnly="True" ItemsSource="{Binding Portfolio}"/>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="2"  HorizontalAlignment="Center" Orientation="Horizontal">

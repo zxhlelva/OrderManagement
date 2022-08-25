@@ -31,7 +31,7 @@ namespace OrderManagement.View
             _vm.LoadList();
         }
 
-        private void CbxLanguage_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CbxLanguage_DropDownClosed(object sender, EventArgs e)
         {
             int selectedLanguageIndex = CbxLanguage.SelectedIndex;
 
@@ -57,10 +57,16 @@ namespace OrderManagement.View
             {
                 dictionaryList.Add(dictionary);
             }
-            
+
             ResourceDictionary resourceDictionary = dictionaryList.FirstOrDefault(d => d.Source.OriginalString.Equals(requestedCulture));
-            Application.Current.Resources.MergedDictionaries.Remove(resourceDictionary);
+            Application.Current.Resources.MergedDictionaries.Clear();
+            //Application.Current.Resources.MergedDictionaries.Remove(resourceDictionary);
             Application.Current.Resources.MergedDictionaries.Add(resourceDictionary);
+        }
+
+        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("New Window");
         }
     }
 }

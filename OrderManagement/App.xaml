@@ -2,8 +2,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resource\Language\ZH.xaml"/>
                 <ResourceDictionary Source="Resource\Language\EN.xaml"/>
+                <ResourceDictionary Source="Resource\Language\ZH.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
